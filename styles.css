@@ -5,11 +5,248 @@
 	--lighter: #6fa2be;
 	--spacer: 30px;
 	--margin: 0 151px;
+	--font-weight-big: 700;
+	--font-weight-mid: 400;
+	--font-size-big: 57px;
+	--font-size-mid: 37px;
+	--font-size-small: 26px;
 }
-
 body {
 	width: 100vw;
 }
+/* utility classes */
+.heighlight_button {
+	background-color: var(--primaray) !important;
+}
+
+.container {
+	padding: var(--margin);
+}
+/* end of utility classes */
+
 /* amer's styles below this */
 
+/* main section style */
+.main {
+	height: 100vh;
+	background: url("./assets/images/istockphoto-1290230630-612x612\ 1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;
+}
+
+.main__nav {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.main__nav ul {
+	display: flex;
+	gap: var(--spacer);
+}
+.main__nav li {
+	cursor: pointer;
+	padding: 0.5rem 2rem;
+	border-radius: 8px;
+	background-color: #d9d9d9;
+}
+.nav__container {
+	display: flex;
+	gap: var(--spacer);
+}
+.nav__secondary {
+	margin-left: 5rem;
+}
+.main__paragraph {
+	width: 554px;
+	font-weight: var(--font-weight-big-big);
+	font-size: var(--font-size-big);
+	line-height: 67px;
+	color: var(--secondary);
+	margin-top: 171px;
+}
+.main__box {
+	width: 359px;
+	background: rgba(171, 221, 255, 0.37);
+	backdrop-filter: blur(33.5px);
+	height: 500px;
+	/* Note: backdrop-filter has minimal browser support add prefix later */
+	font-weight: var(--font-weight-big);
+	font-size: var(--font-size-mid);
+	line-height: 67px;
+	padding: 111px 25px 0 25px;
+	border-radius: 17px;
+	margin-left: auto;
+	margin-top: 150px;
+}
+.main__box__eclipse {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+/* end of main style */
+
+/* payment section style  */
+.payment_method {
+	height: 90vh;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+	background: linear-gradient(
+		264.77deg,
+		#01a6e7 48.32%,
+		rgba(1, 166, 231, 0) 79.73%
+	);
+}
+.payment_method_container {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+.payment_method__left,
+.payment_method__right {
+	width: 50%;
+
+	/* height: 100px; */
+	margin-bottom: 5.43rem;
+}
+.payment_method__solar__container {
+	position: relative;
+
+	margin-left: 14rem;
+}
+.solar__main--circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 144.85px;
+	height: 150.86px;
+	background: rgba(255, 255, 255, 0.81);
+	border-radius: 50%;
+}
+.solar__main--circle--logo {
+}
+.solar__secondary--circle {
+	width: 240.84px;
+	height: 241.98px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: -45px;
+	left: -43px;
+	z-index: -1;
+}
+.solar__outer--circle {
+	width: 342px;
+	height: 350px;
+	border: 1px solid black;
+	position: absolute;
+	top: -102px;
+	left: -90px;
+	border-radius: 50%;
+}
+.solar--blob {
+	z-index: -10;
+	width: 382.27px;
+	height: 578.98px;
+	position: absolute;
+	top: -279px;
+	left: -215px;
+}
+.solar__payment-method--logo {
+	width: 50px;
+	height: 49px;
+	border-radius: 50%;
+}
+.applepay {
+	position: absolute;
+	top: 205px;
+	left: 124px;
+}
+.mastercard {
+	position: absolute;
+	top: -45px;
+	left: -87px;
+}
+.mada {
+	position: absolute;
+	top: -2px;
+	left: 105px;
+}
+.visa {
+	position: absolute;
+	top: 98px;
+	left: -57px;
+}
+.payment_method__paragraph {
+	width: 541px;
+	height: 207px;
+	font-weight: var(--font-weight-big);
+	font-size: var(--font-size-mid);
+	line-height: 59px;
+	color: white;
+}
+.payment_method__secondary-paragraph {
+	width: 440px;
+	font-size: var(--font-size-small);
+	line-height: 35px;
+	font-weight: var(--font-weight-mid);
+	color: #e6dede;
+	margin-bottom: 3rem;
+}
+.payment_method-call-to-action {
+	width: 192px;
+	height: 54px;
+	background-color: var(--secondary);
+	border-radius: 11px;
+	border: none;
+}
+/* end of payment section style */
+
+/* dashboard style */
+.dashboard {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.dashboard__main-text {
+	text-align: center;
+	width: 944px;
+	font-weight: var(--font-weight-big);
+	font-size: var(--font-size-big);
+	line-height: 68px;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
+.dashboard__image--container {
+	width: 100%;
+	background: linear-gradient(
+		180.11deg,
+		rgba(99, 192, 255, 0.37) 32.35%,
+		rgba(171, 221, 255, 0) 99.91%
+	);
+	height: 752px;
+	overflow: hidden;
+}
+.dashboard__big--image {
+	padding: var(--margin);
+	margin-top: 155px;
+}
+/*end of dashboard section style */
+
 /* fatimah's styles below this  */
+
+/*media queries */
+
+@media only screen and (max-width: 1500px) {
+	.main__box {
+		margin-top: 30px;
+	}
+	.payment_method__left {
+		margin-right: 12rem;
+	}
+}
