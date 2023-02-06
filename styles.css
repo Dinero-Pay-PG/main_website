@@ -1,15 +1,165 @@
 :root {
-	--primaray: #01a6e7;
-	--secondary: #0069ab;
-	--light: #abddff;
-	--lighter: #6fa2be;
-	--spacer: 30px;
-	--margin: 0 151px;
+  --primaray: #01a6e7;
+  --secondary: #0069ab;
+  --light: #abddff;
+  --lighter: #6fa2be;
+  --spacer: 30px;
+  --margin: 0 151px;
 }
 
 body {
-	width: 100vw;
+  width: 100vw;
 }
 /* amer's styles below this */
 
-/* fatimah's styles below this  */
+/* fatimah's styles below this */
+
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: crimson;
+}
+
+/* api section*/
+.api {
+  height: 100vh;
+  width: 100vw;
+  background-color: orangered;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.api__row {
+  height: 50%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.api__row:not(:last-child) {
+  margin-bottom: 0rem;
+}
+
+.api__row--1 {
+  background-color: burlywood;
+  background-color: white;
+  padding: 2rem 0rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  height: 90%;
+  width: 15%;
+  background-color: brown;
+  background: linear-gradient(to bottom right, var(--light), white);
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.card .card__icon {
+  height: 3rem;
+  width: 3rem;
+  fill: var(--primaray);
+  margin-bottom: 0.5rem;
+}
+
+.card .card__title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.card .card__body {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.api__row--2 {
+  background-color: coral;
+  justify-content: center;
+  align-items: center;
+}
+
+.code {
+  background-color: burlywood;
+  background: radial-gradient(
+      ellipse farthest-side at 50% 0%,
+      var(--lighter) 10%,
+      transparent
+    ),
+    radial-gradient(
+      ellipse farthest-side at 20% 90%,
+      var(--lighter) 10%,
+      white 500px
+    );
+  height: 100%;
+  width: 60%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.code img {
+  width: 35rem;
+  margin: 0;
+}
+
+.description {
+  background-color: brown;
+  background: radial-gradient(
+    ellipse farthest-side at 50% 90%,
+    var(--lighter),
+    var(--lighter) 30%,
+    white
+  );
+  height: 100%;
+  width: 40%;
+  padding: 2.5rem 5.5rem;
+  font-family: Tienne;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.description h3 {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.description p {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.description .btn {
+  height: 2rem;
+  width: 6.5rem;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 5px;
+}
