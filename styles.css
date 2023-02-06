@@ -13,6 +13,7 @@
 }
 body {
 	width: 100vw;
+	overflow-x: hidden;
 }
 /* utility classes */
 .heighlight_button {
@@ -235,6 +236,7 @@ body {
 .dashboard__big--image {
 	padding: var(--margin);
 	margin-top: 155px;
+	width: 80%;
 }
 /*end of dashboard section style */
 
