@@ -29,7 +29,7 @@ body {
 /* api section*/
 .api {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: orangered;
 
   display: flex;
@@ -162,4 +162,33 @@ body {
   background-color: var(--secondary);
   border: none;
   border-radius: 5px;
+}
+
+/* plugins section*/
+.plugins {
+  height: 100vh;
+  width: 100%;
+  background-color: orangered;
+  background-color: white;
+  padding: 2.5rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plugins__heading {
+  font-family: "Inter";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.plugins__box {
+  height: 70%;
+  width: 100%;
+  background-color: azure;
+  background: linear-gradient(to bottom right, var(--lighter), var(--light));
 }
