@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Tienne:wght@400;700&display=swap");
+
 :root {
 	--primaray: #01a6e7;
 	--secondary: #0069ab;
@@ -9,11 +11,22 @@
 	--font-weight-mid: 400;
 	--font-size-big: 57px;
 	--font-size-mid: 37px;
-	--font-size-small: 26px;
+	--font-size-small: 24px;
+	--font-type-header: "Tienne", serif;
 }
 body {
 	width: 100vw;
 	overflow-x: hidden;
+}
+p {
+	font-size: var(--font-size-small);
+	/* font-weight:var(--font-weight-mid); */
+	font-family: var(--font-type-header);
+}
+h1 {
+	font-size: var(--font-size-big);
+	font-weight: var(--font-weight-big);
+	font-family: var(--font-type-header);
 }
 /* utility classes */
 .heighlight_button {
@@ -36,7 +49,9 @@ body {
 	width: 100%;
 	overflow: hidden;
 }
-
+.main__container {
+	max-width: 1440px;
+}
 .main__nav {
 	width: 100%;
 
@@ -45,11 +60,14 @@ body {
 	justify-content: space-between;
 	flex-grow: 0;
 	flex-shrink: 0;
-	transform: translateY(25px);
+	transform: translateY(19px);
 }
 .main__nav ul {
 	display: flex;
 	gap: var(--spacer);
+}
+.nav__navigation {
+	gap: 47px;
 }
 .main__nav li {
 	cursor: pointer;
@@ -66,48 +84,50 @@ body {
 	gap: var(--spacer);
 }
 .nav__secondary {
-	margin-left: 5rem;
+	margin-left: 127px;
+	gap: 28px;
 }
 .main__paragraph {
 	width: 554px;
-	font-weight: var(--font-weight-big-big);
-	font-size: var(--font-size-big);
 	line-height: 67px;
 	color: var(--secondary);
-	margin-top: 171px;
+	transform: translateY(93px);
+	margin-left: 207px;
 }
 .main__box {
-	width: 310px;
-	background: rgba(
-		170.84998905658722,
-		221.06853514909744,
-		255,
-		0.3700000047683716
-	);
+	width: 359px;
+	background: rgba(171, 221, 255, 0.516);
 	backdrop-filter: blur(33.5px);
 	height: 500px;
-	/* Note: backdrop-filter has minimal browser support add prefix later */
 	font-weight: var(--font-weight-big);
 	font-size: var(--font-size-mid);
+	font-family: var(--font-type-header);
 	line-height: 67px;
-	padding: 111px 25px 0 25px;
+	padding: 100px 25px 0 25px;
 	border-radius: 17px;
 	margin-left: auto;
-	margin-top: 180px;
-	margin-right: 70px;
+	transform: translateY(257px);
+	margin-right: 80px;
 	position: relative;
 }
-.main__box__eclipse {
+.main__box__ellipse {
 	position: absolute;
-	bottom: -68px;
-	right: 36px;
+	bottom: -75px;
+	right: -92px;
+}
+
+.main__ham--menue {
+	width: 20px;
+}
+.main__ham--menue img {
+	width: 100%;
 }
 /* end of main style */
 
 /* payment section style  */
 .payment_method {
-	height: 90vh;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+	height: 781px;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 	background: linear-gradient(
 		264.77deg,
 		#01a6e7 48.32%,
@@ -118,6 +138,7 @@ body {
 	display: flex;
 	height: 100%;
 	align-items: center;
+	max-width: 1440px;
 }
 .payment_method__left,
 .payment_method__right {
@@ -129,7 +150,7 @@ body {
 .payment_method__solar__container {
 	position: relative;
 
-	margin-left: 14rem;
+	margin-left: 6rem;
 }
 .solar__main--circle {
 	display: flex;
@@ -166,8 +187,8 @@ body {
 	width: 382.27px;
 	height: 578.98px;
 	position: absolute;
-	top: -279px;
-	left: -215px;
+	top: -226px;
+	left: -245px;
 }
 .solar__payment-method--logo {
 	width: 50px;
@@ -196,19 +217,16 @@ body {
 }
 .payment_method__paragraph {
 	width: 541px;
-	height: 207px;
-	font-weight: var(--font-weight-big);
 	font-size: var(--font-size-mid);
 	line-height: 59px;
 	color: white;
+	margin-bottom: 40px;
 }
 .payment_method__secondary-paragraph {
 	width: 440px;
-	font-size: var(--font-size-small);
 	line-height: 35px;
-	font-weight: var(--font-weight-mid);
 	color: #e6dede;
-	margin-bottom: 3rem;
+	margin-bottom: 40px;
 }
 .payment_method-call-to-action {
 	width: 192px;
@@ -224,13 +242,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 7rem;
+	margin-bottom: 113px;
+	margin-top: 80px;
 }
 .dashboard__main-text {
 	text-align: center;
-	width: 944px;
-	font-weight: var(--font-weight-big);
-	font-size: var(--font-size-big);
 	line-height: 68px;
 	margin-top: 2rem;
 	margin-bottom: 3rem;
@@ -542,14 +558,158 @@ body {
 
 /*media queries */
 
+/* amer's media */
 @media only screen and (max-width: 1500px) {
-	/* amer's media */
-	.main__box {
-		margin-top: 180px;
-	}
 	.payment_method__left {
 		margin-right: 12rem;
 	}
-
-	/* fatimah's media */
 }
+
+@media only screen and (min-width: 1400px) {
+	.main__container,
+	.payment_method_container {
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width: 600px) {
+	:root {
+		--font-weight-big: 700;
+		--font-weight-mid: 400;
+		--font-size-big: 30px;
+		--font-size-mid: 30px;
+		--font-size-small: 24px;
+	}
+	.nav__container {
+		display: none;
+	}
+	.main__ham--menue {
+		display: block;
+		cursor: pointer;
+	}
+	.nav__logo {
+		width: 36px;
+	}
+	.nav__logo img {
+		width: 100%;
+	}
+	.container {
+		padding: 0;
+	}
+	.main__nav {
+		background: rgba(171, 221, 255, 0.6);
+		height: 51px;
+		padding: 0 25px;
+		transform: translateY(0);
+	}
+	.main__paragraph {
+		margin: 0 auto;
+		width: 232px;
+	}
+	.main__box {
+		margin: 0 auto;
+	}
+	.payment_method {
+		background: linear-gradient(
+			196.03deg,
+			#01a6e7 13.42%,
+			rgba(1, 166, 231, 0) 82.59%
+		);
+		height: 790px;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 104%);
+	}
+	.payment_method_container {
+		flex-direction: column-reverse;
+		height: auto;
+	}
+	.payment_method__secondary-paragraph {
+		display: none;
+	}
+	.payment_method__paragraph {
+		width: 308px;
+	}
+	.payment_method-call-to-action {
+		margin: 0 auto;
+		width: 155px;
+		height: 44px;
+	}
+	.payment_method__right--cotainer {
+		text-align: center;
+		margin-top: 100px;
+		margin-bottom: 108px;
+	}
+	.payment_method__left {
+		margin: 0 auto;
+	}
+	.payment_method__solar__container {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.solar__main--circle {
+		width: 68.66px;
+		height: 70.94px;
+	}
+	.solar__main--circle--logo {
+		width: 50%;
+	}
+	.solar__secondary--circle {
+		width: 113.24px;
+		height: 113.25px;
+		left: -21px;
+		top: -21px;
+	}
+	.solar__outer--circle {
+		width: 160.81px;
+		height: 164.57px;
+		top: -48px;
+		left: -45px;
+	}
+	.solar--blob {
+		width: 323.27px;
+		height: 272.23px;
+		top: -103px;
+		left: -128px;
+	}
+	.solar--blob--image {
+		width: 100%;
+	}
+	.solar__payment-method--logo {
+		width: 23.51px;
+		height: 23.04px;
+	}
+	.applepay {
+		top: 84px;
+		left: 73px;
+	}
+	.mastercard {
+		top: -3px;
+		left: -54px;
+	}
+	.mada {
+		top: 2px;
+		left: 48px;
+	}
+	.visa {
+		top: 52px;
+		left: -24px;
+	}
+	.dashboard__main-text {
+		width: 390px;
+		line-height: 50px;
+	}
+	.dashboard__image--container {
+		height: 351px;
+	}
+	.dashboard__image--container .container {
+		padding: 0 27px;
+	}
+	.dashboard__big--image {
+		margin-top: 72px;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.main__ham--menue {
+		display: none;
+	}
+}
+
+/* fatimah's media */
