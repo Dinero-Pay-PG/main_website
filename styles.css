@@ -126,7 +126,7 @@ h1 {
 
 /* payment section style  */
 .payment_method {
-	height: 781px;
+	height: 900px;
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 	background: linear-gradient(
 		264.77deg,
@@ -145,11 +145,12 @@ h1 {
 	width: 50%;
 
 	/* height: 100px; */
-	margin-bottom: 5.43rem;
+	margin-bottom: 10.43rem;
 }
 .payment_method__solar__container {
 	position: relative;
-
+	width: 342px;
+	height: 42px;
 	margin-left: 6rem;
 }
 .solar__main--circle {
@@ -157,15 +158,14 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	width: 144.85px;
-	height: 150.86px;
+	height: 144.85px;
 	background: rgba(255, 255, 255, 0.81);
 	border-radius: 50%;
 }
-.solar__main--circle--logo {
-}
+
 .solar__secondary--circle {
-	width: 240.84px;
-	height: 241.98px;
+	width: 240.98px;
+	height: 240.98px;
 	border-radius: 50%;
 	background: rgba(0, 0, 0, 0.4);
 	position: absolute;
@@ -175,7 +175,7 @@ h1 {
 }
 .solar__outer--circle {
 	width: 342px;
-	height: 350px;
+	height: 342px;
 	border: 1px solid black;
 	position: absolute;
 	top: -102px;
@@ -190,30 +190,41 @@ h1 {
 	top: -226px;
 	left: -245px;
 }
+
 .solar__payment-method--logo {
 	width: 50px;
 	height: 49px;
 	border-radius: 50%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 .applepay {
 	position: absolute;
-	top: 205px;
-	left: 124px;
+	top: 126%;
+	left: 17%;
+	animation-name: applepay-rotate;
+	animation-duration: 8s;
 }
 .mastercard {
 	position: absolute;
-	top: -45px;
-	left: -87px;
+	top: 126%;
+	left: 17%;
+	animation-name: applepay-rotate;
+	animation-duration: 5s;
 }
 .mada {
 	position: absolute;
-	top: -2px;
-	left: 105px;
+	top: 100%;
+	left: 13%;
+	animation-name: mada-rotate;
+	animation-duration: 10s;
 }
 .visa {
 	position: absolute;
-	top: 98px;
-	left: -57px;
+	top: 125%;
+	left: 14%;
+	animation-name: visa-rotate;
+	animation-duration: 9s;
 }
 .payment_method__paragraph {
 	width: 541px;
@@ -263,8 +274,9 @@ h1 {
 }
 
 .dashboard__big--image {
-	margin-top: 155px;
+	transform: translateY(400px);
 	width: 100%;
+	transition: transform 0.9s linear;
 }
 /*end of dashboard section style */
 
@@ -555,13 +567,37 @@ h1 {
 	margin-top: 2.5rem;
 	margin-bottom: 2rem;
 }
+@keyframes applepay-rotate {
+	from {
+		transform: rotate(0deg) translateX(171px) rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg) translateX(171px) rotate(360deg);
+	}
+}
+@keyframes visa-rotate {
+	from {
+		transform: rotate(0deg) translateX(120.49px) rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg) translateX(120.49px) rotate(360deg);
+	}
+}
+@keyframes mada-rotate {
+	from {
+		transform: rotate(0deg) translateX(72.425px) rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg) translateX(72.425px) rotate(360deg);
+	}
+}
 
 /*media queries */
 
 /* amer's media */
 @media only screen and (max-width: 1500px) {
 	.payment_method__left {
-		margin-right: 12rem;
+		margin-right: 5rem;
 	}
 }
 
@@ -635,7 +671,10 @@ h1 {
 	.payment_method__right--cotainer {
 		text-align: center;
 		margin-top: 100px;
-		margin-bottom: 108px;
+		margin-bottom: 20px;
+	}
+	.payment_method__right {
+		width: auto;
 	}
 	.payment_method__left {
 		margin: 0 auto;
@@ -643,23 +682,24 @@ h1 {
 	.payment_method__solar__container {
 		display: flex;
 		justify-content: flex-start;
+		margin-left: 4rem;
 	}
 	.solar__main--circle {
 		width: 68.66px;
-		height: 70.94px;
+		height: 68.66px;
 	}
 	.solar__main--circle--logo {
 		width: 50%;
 	}
 	.solar__secondary--circle {
 		width: 113.24px;
-		height: 113.25px;
+		height: 113.24px;
 		left: -21px;
 		top: -21px;
 	}
 	.solar__outer--circle {
 		width: 160.81px;
-		height: 164.57px;
+		height: 160.81px;
 		top: -48px;
 		left: -45px;
 	}
@@ -677,20 +717,20 @@ h1 {
 		height: 23.04px;
 	}
 	.applepay {
-		top: 84px;
-		left: 73px;
+		top: 56%;
+		left: 6%;
 	}
 	.mastercard {
-		top: -3px;
-		left: -54px;
+		top: 56%;
+		left: 6%;
 	}
 	.mada {
-		top: 2px;
-		left: 48px;
+		top: 52%;
+		left: 8%;
 	}
 	.visa {
-		top: 52px;
-		left: -24px;
+		top: 60%;
+		left: 8%;
 	}
 	.dashboard__main-text {
 		width: 390px;
@@ -704,6 +744,30 @@ h1 {
 	}
 	.dashboard__big--image {
 		margin-top: 72px;
+	}
+	@keyframes applepay-rotate {
+		from {
+			transform: rotate(0deg) translateX(80.405px) rotate(0deg);
+		}
+		to {
+			transform: rotate(-360deg) translateX(80.405px) rotate(360deg);
+		}
+	}
+	@keyframes visa-rotate {
+		from {
+			transform: rotate(0deg) translateX(56.62px) rotate(0deg);
+		}
+		to {
+			transform: rotate(-360deg) translateX(56.62px) rotate(360deg);
+		}
+	}
+	@keyframes mada-rotate {
+		from {
+			transform: rotate(0deg) translateX(34.33px) rotate(0deg);
+		}
+		to {
+			transform: rotate(-360deg) translateX(34.33px) rotate(360deg);
+		}
 	}
 }
 @media only screen and (min-width: 600px) {
