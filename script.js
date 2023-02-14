@@ -2,10 +2,6 @@
 
 /* amer's scripts */
 
-let options = {
-	// root: document.querySelector(".payment_method"),
-	rootMargin: "0px",
-};
 let observer = new IntersectionObserver((entries) => {
 	let [image] = entries;
 	console.log(image);
@@ -16,5 +12,4 @@ let observer = new IntersectionObserver((entries) => {
 	}
 });
 const imageDashboard = document.querySelector(".dashboard__big--image");
-// const dashboard = document.querySelector(".dashboard");
 observer.observe(imageDashboard);

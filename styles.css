@@ -42,8 +42,9 @@ h1 {
 
 /* main section style */
 .main {
-	height: 949px;
-	background: url("./assets/images/istockphoto-1290230630-612x612\ 1.png");
+	/* height: 949px; */
+	height: 100vh;
+	background-image: url("./assets/images/main_background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -90,7 +91,7 @@ h1 {
 .main__paragraph {
 	width: 554px;
 	line-height: 67px;
-	color: var(--secondary);
+	color: rgba(255, 255, 255, 0.891);
 	transform: translateY(93px);
 	margin-left: 207px;
 }
@@ -106,7 +107,7 @@ h1 {
 	padding: 100px 25px 0 25px;
 	border-radius: 17px;
 	margin-left: auto;
-	transform: translateY(257px);
+	transform: translateY(350px);
 	margin-right: 80px;
 	position: relative;
 }
@@ -114,6 +115,7 @@ h1 {
 	position: absolute;
 	bottom: -75px;
 	right: -92px;
+	animation: rotation 25s infinite linear;
 }
 
 .main__ham--menue {
@@ -205,12 +207,13 @@ h1 {
 	animation-name: applepay-rotate;
 	animation-duration: 8s;
 }
+
 .mastercard {
 	position: absolute;
 	top: 126%;
 	left: 17%;
 	animation-name: applepay-rotate;
-	animation-duration: 5s;
+	animation-duration: 12s;
 }
 .mada {
 	position: absolute;
@@ -218,6 +221,7 @@ h1 {
 	left: 13%;
 	animation-name: mada-rotate;
 	animation-duration: 10s;
+	animation-direction: reverse;
 }
 .visa {
 	position: absolute;
@@ -276,7 +280,7 @@ h1 {
 .dashboard__big--image {
 	transform: translateY(400px);
 	width: 100%;
-	transition: transform 0.9s linear;
+	transition: transform 0.9s ease-in-out;
 }
 /*end of dashboard section style */
 
@@ -300,7 +304,7 @@ h1 {
 }
 
 .api__row:not(:last-child) {
-	margin-bottom: 0rem;
+	/* margin-bottom: 0rem; */
 }
 
 .api__row--1 {
@@ -309,21 +313,26 @@ h1 {
 	padding: 2rem 0rem;
 	justify-content: center;
 	align-items: flex-start;
-	margin-bottom: 5rem;
+	/* margin-bottom: 5rem; */
+	margin-bottom: 184px;
 }
 
 .card {
-	height: 90%;
-	width: 15%;
+	/* height: 90%; */
+	/* width: 15%; */
+	width: 262px;
+	height: 286px;
 	background-color: brown;
 	background: linear-gradient(to bottom right, var(--light), white);
 	padding: 1rem;
 	font-family: Arial, Helvetica, sans-serif;
-
+	padding: 40px 0 0 22px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: center;
+	/* justify-content: center; */
+
+	border-radius: 10px;
 }
 
 .card:not(:last-child) {
@@ -341,7 +350,7 @@ h1 {
 	font-weight: 700;
 	font-size: 1rem;
 	line-height: 1.4;
-	margin-bottom: 0.5rem;
+	margin-bottom: 14px;
 }
 
 .card .card__body {
@@ -351,14 +360,8 @@ h1 {
 }
 
 .api__row--2 {
-	background-color: coral;
-	justify-content: center;
-	align-items: center;
-}
-
-.code {
-	background-color: burlywood;
-	background: radial-gradient(
+	/* background-color: coral; */
+	/* background: radial-gradient(
 			ellipse farthest-side at 50% 0%,
 			var(--lighter) 10%,
 			transparent
@@ -367,9 +370,29 @@ h1 {
 			ellipse farthest-side at 20% 90%,
 			var(--lighter) 10%,
 			white 500px
-		);
+		); */
+	background: url("./assets/images/api_background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	padding: var(--margin);
+}
+
+.code {
+	/* background-color: burlywood; */
+	/* background: radial-gradient(
+			ellipse farthest-side at 50% 0%,
+			var(--lighter) 10%,
+			transparent
+		),
+		radial-gradient(
+			ellipse farthest-side at 20% 90%,
+			var(--lighter) 10%,
+			white 500px
+		); */
 	height: 100%;
-	width: 60%;
+	/* width: 60%; */
 
 	display: flex;
 	justify-content: flex-end;
@@ -381,14 +404,14 @@ h1 {
 }
 
 .description {
-	background-color: brown;
-	background: radial-gradient(
+	/* background-color: brown; */
+	/* background: radial-gradient(
 		ellipse farthest-side at 50% 90%,
 		var(--lighter),
 		var(--lighter) 30%,
 		white
-	);
-	height: 100%;
+	); */
+	/* height: 100%; */
 	width: 40%;
 	padding: 2.5rem 5.5rem;
 	font-family: Tienne;
@@ -425,8 +448,8 @@ h1 {
 	width: 100%;
 	background-color: orangered;
 	background-color: white;
-	padding: 2.5rem 0rem;
-
+	/* padding: 2.5rem 0rem; */
+	margin-top: 97px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -434,13 +457,45 @@ h1 {
 }
 
 .plugins__heading {
-	font-family: "Inter";
+	font-family: var(--font-type-header);
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1.2;
 	margin-bottom: 2rem;
 }
-
+.box_container {
+	width: 100vw;
+	overflow: hidden;
+	filter: blur(1.5px);
+}
+.wrapper {
+	width: 200%;
+	height: 400px;
+	background: linear-gradient(
+		to bottom right,
+		rgba(51, 173, 255, 100%),
+		rgba(51, 173, 255, 26%)
+	);
+	display: flex;
+	overflow: hidden;
+	gap: 30px;
+}
+.plugins_image {
+	width: 156px;
+	animation: scroll 20s infinite linear;
+	transform: rotate(23deg);
+}
+svg {
+	width: 100%;
+}
+@keyframes scroll {
+	0% {
+		transform: translateY(0) rotate(23deg);
+	}
+	100% {
+		transform: translateY(-180%) rotate(23deg);
+	}
+}
 .plugins__box {
 	height: 70%;
 	width: 100%;
@@ -591,13 +646,23 @@ h1 {
 		transform: rotate(-360deg) translateX(72.425px) rotate(360deg);
 	}
 }
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
 
 /*media queries */
 
 /* amer's media */
 @media only screen and (max-width: 1500px) {
 	.payment_method__left {
-		margin-right: 5rem;
+	}
+	.main__box {
+		transform: translateY(30%);
 	}
 }
 
@@ -614,6 +679,9 @@ h1 {
 		--font-size-big: 30px;
 		--font-size-mid: 30px;
 		--font-size-small: 24px;
+	}
+	.main {
+		height: 100vh;
 	}
 	.nav__container {
 		display: none;
@@ -638,8 +706,10 @@ h1 {
 		transform: translateY(0);
 	}
 	.main__paragraph {
+		margin-left: 0;
 		margin: 0 auto;
-		width: 232px;
+		width: 380px;
+		margin-bottom: 25px;
 	}
 	.main__box {
 		margin: 0 auto;
@@ -682,7 +752,6 @@ h1 {
 	.payment_method__solar__container {
 		display: flex;
 		justify-content: flex-start;
-		margin-left: 4rem;
 	}
 	.solar__main--circle {
 		width: 68.66px;
@@ -768,6 +837,11 @@ h1 {
 		to {
 			transform: rotate(-360deg) translateX(34.33px) rotate(360deg);
 		}
+	}
+}
+@media only screen and (max-width: 420px) {
+	.payment_method__solar__container {
+		margin-left: 4rem;
 	}
 }
 @media only screen and (min-width: 600px) {
