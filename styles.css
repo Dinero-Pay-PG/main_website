@@ -192,7 +192,102 @@ body {
   width: 100%;
   background-color: azure;
   background: linear-gradient(to bottom right, var(--lighter), var(--light));
-  background: url(assets/images/plugins.svg);
+  /* background: url(assets/images/plugins-stripe.svg); */
+
+  overflow: hidden;
+}
+
+.plugins__scroll {
+  height: 100%;
+  width: 100%;
+  /* background-color: aquamarine; */
+  transform: rotate(30deg) translateY(-110px) translateX(40px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plugins__stripe {
+  height: 200%;
+  /* background-color: rosybrown; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.plugins__stripe img {
+  width: 9rem;
+  padding-top: 1.1rem;
+  /* padding-bottom: 0.8rem; */
+
+  /* animation: stripe1 20s linear infinite;
+  animation-delay: -20s; */
+}
+
+/* .plugins__stripe img:nth-child(2) {
+  animation: stripe2 20s linear infinite;
+  animation-delay: -10s;
+} */
+
+.plugins__stripe--1 img,
+.plugins__stripe--3 img,
+.plugins__stripe--7 img {
+  animation: stripe1 10s linear infinite;
+  animation-delay: -10s;
+}
+
+.plugins__stripe--1 img:nth-child(2),
+.plugins__stripe--3 img:nth-child(2),
+.plugins__stripe--7 img:nth-child(2) {
+  animation: stripe2 10s linear infinite;
+  animation-delay: -5s;
+}
+
+.plugins__stripe--2 img,
+.plugins__stripe--5 img,
+.plugins__stripe--8 img {
+  animation: stripe1 40s linear infinite;
+  animation-delay: -40s;
+}
+
+.plugins__stripe--2 img:nth-child(2),
+.plugins__stripe--5 img:nth-child(2),
+.plugins__stripe--8 img:nth-child(2) {
+  animation: stripe2 40s linear infinite;
+  animation-delay: -20s;
+}
+
+.plugins__stripe--4 img,
+.plugins__stripe--6 img {
+  animation: stripe1 20s linear infinite;
+  animation-delay: -20s;
+}
+
+.plugins__stripe--4 img:nth-child(2),
+.plugins__stripe--6 img:nth-child(2) {
+  animation: stripe2 20s linear infinite;
+  animation-delay: -10s;
+}
+
+@keyframes stripe1 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes stripe2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200%);
+  }
 }
 
 /* footer */
@@ -309,3 +404,5 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
+
+/* fatimah's media */
