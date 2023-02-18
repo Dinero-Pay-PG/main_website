@@ -192,7 +192,7 @@ body {
   width: 100%;
   background-color: azure;
   background: linear-gradient(to bottom right, var(--lighter), var(--light));
-  background: url(img/plugins.svg);
+  background: url(assets/images/plugins.svg);
 }
 
 /* footer */
