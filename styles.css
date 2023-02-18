@@ -107,8 +107,8 @@ h1 {
 	padding: 100px 25px 0 25px;
 	border-radius: 17px;
 	margin-left: auto;
-	transform: translateY(350px);
 	margin-right: 80px;
+	margin-top: calc(100vh - 665px);
 	position: relative;
 }
 .main__box__ellipse {
@@ -314,7 +314,8 @@ h1 {
 	justify-content: center;
 	align-items: flex-start;
 	/* margin-bottom: 5rem; */
-	margin-bottom: 184px;
+	margin-top: 1vh;
+	margin-bottom: 100px;
 }
 
 .card {
@@ -322,8 +323,11 @@ h1 {
 	/* width: 15%; */
 	width: 262px;
 	height: 286px;
-	background-color: brown;
-	background: linear-gradient(to bottom right, var(--light), white);
+	background: linear-gradient(
+		135.45deg,
+		rgba(171, 198, 255, 0.37) 39.52%,
+		rgba(217, 217, 217, 0) 105.76%
+	);
 	padding: 1rem;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 40px 0 0 22px;
@@ -444,16 +448,17 @@ h1 {
 
 /* plugins section */
 .plugins {
-	height: 100vh;
+	/* height: 100vh; */
 	width: 100%;
 	background-color: orangered;
 	background-color: white;
 	/* padding: 2.5rem 0rem; */
-	margin-top: 97px;
+	margin-top: 12rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 12rem;
 }
 
 .plugins__heading {
@@ -661,9 +666,6 @@ svg {
 @media only screen and (max-width: 1500px) {
 	.payment_method__left {
 	}
-	.main__box {
-		transform: translateY(30%);
-	}
 }
 
 @media only screen and (min-width: 1400px) {
@@ -679,6 +681,28 @@ svg {
 		--font-size-big: 30px;
 		--font-size-mid: 30px;
 		--font-size-small: 24px;
+	}
+	.bank .bank__icon {
+		width: 7rem;
+	}
+	.bank {
+		justify-content: space-between;
+	}
+	.bank .bank__icon:not(:last-child) {
+		margin-right: 0;
+	}
+	.api__row {
+		height: auto;
+	}
+	.api__row--1 {
+		flex-direction: column;
+		align-items: center;
+		gap: 83px;
+	}
+	.card:not(:last-child) {
+		margin-right: 0;
+	}
+	.bank .bank__icon {
 	}
 	.main {
 		height: 100vh;
@@ -712,7 +736,8 @@ svg {
 		margin-bottom: 25px;
 	}
 	.main__box {
-		margin: 0 auto;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	.payment_method {
 		background: linear-gradient(
