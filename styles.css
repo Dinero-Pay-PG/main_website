@@ -199,6 +199,7 @@ h1 {
 	border-radius: 50%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+	transition: all 0.5s ease-in;
 }
 .applepay {
 	position: absolute;
@@ -292,6 +293,7 @@ h1 {
 
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 14vh;
 }
 
 .api__row {
@@ -325,7 +327,7 @@ h1 {
 	height: 286px;
 	background: linear-gradient(
 		135.45deg,
-		rgba(171, 198, 255, 0.37) 39.52%,
+		rgba(171, 221, 255, 0.37) 41.84%,
 		rgba(217, 217, 217, 0) 105.76%
 	);
 	padding: 1rem;
@@ -447,18 +449,17 @@ h1 {
 }
 
 /* plugins section */
+
 .plugins {
-	/* height: 100vh; */
+	height: 100vh;
 	width: 100%;
-	background-color: orangered;
-	background-color: white;
-	/* padding: 2.5rem 0rem; */
-	margin-top: 12rem;
+	padding: 2.5rem 0rem;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 12rem;
+	margin-bottom: 2vh;
 }
 
 .plugins__heading {
@@ -468,49 +469,115 @@ h1 {
 	line-height: 1.2;
 	margin-bottom: 2rem;
 }
-.box_container {
-	width: 100vw;
-	overflow: hidden;
-	filter: blur(1.5px);
-}
-.wrapper {
-	width: 200%;
-	height: 400px;
+
+.plugins__box {
+	/* height: 70%; */
+	height: 540px;
+	width: 100%;
 	background: linear-gradient(
 		to bottom right,
 		rgba(51, 173, 255, 100%),
 		rgba(51, 173, 255, 26%)
 	);
-	display: flex;
+	filter: blur(1.5px);
+	/* background: url(assets/images/plugins-stripe.svg); */
+
 	overflow: hidden;
-	gap: 30px;
 }
-.plugins_image {
-	width: 156px;
-	animation: scroll 20s infinite linear;
-	transform: rotate(23deg);
-}
-svg {
+
+.plugins__scroll {
+	height: 100%;
 	width: 100%;
+	/* background-color: aquamarine; */
+	transform: rotate(30deg) translateY(-110px) translateX(40px);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-@keyframes scroll {
+
+.plugins__stripe {
+	height: 200%;
+	/* background-color: rosybrown; */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: center;
+}
+
+.plugins__stripe img {
+	width: 9rem;
+	padding-top: 1.1rem;
+	/* padding-bottom: 0.8rem; */
+
+	/* animation: stripe1 20s linear infinite;
+  animation-delay: -20s; */
+}
+
+/* .plugins__stripe img:nth-child(2) {
+  animation: stripe2 20s linear infinite;
+  animation-delay: -10s;
+} */
+
+.plugins__stripe--1 img,
+.plugins__stripe--3 img,
+.plugins__stripe--7 img {
+	animation: stripe1 30s linear infinite;
+	animation-delay: -30s;
+}
+
+.plugins__stripe--1 img:nth-child(2),
+.plugins__stripe--3 img:nth-child(2),
+.plugins__stripe--7 img:nth-child(2) {
+	animation: stripe2 30s linear infinite;
+	animation-delay: -15s;
+}
+
+.plugins__stripe--2 img,
+.plugins__stripe--5 img,
+.plugins__stripe--8 img {
+	animation: stripe1 40s linear infinite;
+	animation-delay: -40s;
+	animation-direction: reverse;
+}
+
+.plugins__stripe--2 img:nth-child(2),
+.plugins__stripe--5 img:nth-child(2),
+.plugins__stripe--8 img:nth-child(2) {
+	animation: stripe2 40s linear infinite;
+	animation-delay: -20s;
+	animation-direction: reverse;
+}
+
+.plugins__stripe--4 img,
+.plugins__stripe--6 img {
+	animation: stripe1 20s linear infinite;
+	animation-delay: -20s;
+}
+
+.plugins__stripe--4 img:nth-child(2),
+.plugins__stripe--6 img:nth-child(2) {
+	animation: stripe2 20s linear infinite;
+	animation-delay: -10s;
+}
+
+@keyframes stripe1 {
 	0% {
-		transform: translateY(0) rotate(23deg);
+		transform: translateY(100%);
 	}
 	100% {
-		transform: translateY(-180%) rotate(23deg);
+		transform: translateY(-100%);
 	}
 }
-.plugins__box {
-	height: 70%;
-	width: 100%;
-	background-color: azure;
-	background: linear-gradient(to bottom right, var(--lighter), var(--light));
-	background: url(assets/images/plugins.svg);
 
-	/* for extra big screen */
-	background-size: cover;
-	background-repeat: no-repeat;
+@keyframes stripe2 {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-200%);
+	}
 }
 
 /* footer */
@@ -663,8 +730,14 @@ svg {
 /*media queries */
 
 /* amer's media */
-@media only screen and (max-width: 1500px) {
-	.payment_method__left {
+@media only screen and (max-width: 1400px) {
+	.main__paragraph {
+		margin-left: 0;
+	}
+	.main__box {
+		height: 395px;
+		padding-top: 32px;
+		margin-top: calc(100vh - 537px);
 	}
 }
 
