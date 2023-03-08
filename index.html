@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,13 +24,15 @@
 					</div>
 					<div class="nav__container">
 						<ul class="nav__navigation">
-							<li class="nav__item">Lorem</li>
-							<li class="nav__item">Lorem</li>
-							<li class="nav__item">Lorem</li>
+							<li class="nav__item" data-i18n="nav:developers">Lorem</li>
+							<li class="nav__item" data-i18n="nav:payments">Lorem</li>
+							<li class="nav__item" data-i18n="nav:platforms">Lorem</li>
 						</ul>
 						<ul class="nav__secondary">
-							<li class="nav__item">Lorem</li>
-							<li class="nav__item heighlight_button">Lorem</li>
+							<li class="nav__item" data-i18n="nav:features">Lorem</li>
+							<li class="nav__item heighlight_button" data-i18n="nav:register">
+								Lorem
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -310,6 +312,8 @@
 				/>
 			</div>
 		</section>
-		<script src="script.js"></script>
+		<script src="
+		https://cdn.jsdelivr.net/npm/i18next@22.4.11/i18next.min.js"></script>
+		<script type="module" src="script.js"></script>
 	</body>
 </html>

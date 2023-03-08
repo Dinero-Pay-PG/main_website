@@ -1,0 +1,20 @@
+{
+	"ar": {
+		"nav": {
+			"developers": "المطورين",
+			"platforms": "المنصات",
+			"register": "سجل دخولك",
+			"payments": "طرق الدفع",
+			"features": "المميزات"
+		}
+	},
+	"en": {
+		"nav": {
+			"developers": "Devlopers",
+			"platforms": "Platforms",
+			"register": "Login",
+			"features": "Features",
+			"payments": "Payments"
+		}
+	}
+}

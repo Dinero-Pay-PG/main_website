@@ -305,10 +305,6 @@ h1 {
 	align-items: center;
 }
 
-.api__row:not(:last-child) {
-	/* margin-bottom: 0rem; */
-}
-
 .api__row--1 {
 	background-color: burlywood;
 	background-color: white;
@@ -339,6 +335,11 @@ h1 {
 	/* justify-content: center; */
 
 	border-radius: 10px;
+	transition: transform 0.3s;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.03);
 }
 
 .card:not(:last-child) {
@@ -774,8 +775,6 @@ h1 {
 	}
 	.card:not(:last-child) {
 		margin-right: 0;
-	}
-	.bank .bank__icon {
 	}
 	.main {
 		height: 100vh;

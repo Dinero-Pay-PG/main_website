@@ -1,9 +1,14 @@
+import translation from "./assets/i18n/translation.json" assert { type: "json" };
+
 /* fatimah's scripts */
+
 const plugin_scroll_container = document.querySelector(".plugins__scroll");
+
 const [first, second, third] = plugin_scroll_container.children;
 let firstClone = first.cloneNode(true);
 let secondClone = second.cloneNode(true);
 let thirdClone = third.cloneNode(true);
+
 if (window.innerWidth > 1450) {
 	plugin_scroll_container.appendChild(firstClone);
 	plugin_scroll_container.appendChild(secondClone);
@@ -24,7 +29,32 @@ window.addEventListener("resize", (e) => {
 	}
 });
 
+i18next.init({
+	lng: "ar", // if you're using a language detector, do not define the lng option
+	debug: true,
+	resources: {
+		...translation,
+	},
+});
+
+const logo = document.querySelector(".nav__logo");
+
+logo.addEventListener("click", async () => {
+	let lng = document.documentElement.lang === "en" ? "ar" : "en";
+	await i18next.changeLanguage(lng);
+	changLanguage(lng);
+});
+function changLanguage(lng) {
+	const fields = document.querySelectorAll("[data-i18n]");
+	fields.forEach((field) => {
+		field.innerText = i18next.t(`${field.dataset.i18n}`);
+	});
+	document.documentElement.lang = lng;
+	document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+}
+
 /* amer's scripts */
+
 const paymentMethods = document.querySelectorAll(
 	".solar__payment-method--logo"
 );
